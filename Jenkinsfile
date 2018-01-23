@@ -1,24 +1,33 @@
 pipeline {
   agent any
   stages {
-    stage('Upload Package') {
-      steps {
-        sh 'ls'
-      }
-    }
-    stage('Register') {
-      steps {
-        sh 'ls'
-      }
-    }
-    stage('Configuration') {
-      steps {
-        echo 'Config'
+    stage('Prepare Package') {
+      parallel {
+        stage('Upload Package') {
+          steps {
+            sh 'ls'
+          }
+        }
+        stage('Register') {
+          steps {
+            sleep 15
+          }
+        }
+        stage('Configuration') {
+          steps {
+            sleep 10
+          }
+        }
+        stage('Check Environment ') {
+          steps {
+            sleep 10
+          }
+        }
       }
     }
     stage('SandBox Test') {
       steps {
-        echo 'sandbox '
+        echo 'Running SandBox Testing'
       }
     }
     stage('Deploy') {
