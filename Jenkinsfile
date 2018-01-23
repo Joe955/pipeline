@@ -18,10 +18,7 @@ pipeline {
     }
     stage('SandBox Test') {
       steps {
-        waitUntil() {
-          sleep 1
-        }
-        
+        echo 'sandbox '
       }
     }
     stage('Deploy') {
