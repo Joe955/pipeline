@@ -2,34 +2,16 @@ pipeline {
   agent any
   stages {
     stage('Upload Package') {
-      agent {
-        node {
-          label 'Upload Package'
-        }
-        
-      }
       steps {
         sh 'ls'
       }
     }
     stage('Register') {
-      agent {
-        node {
-          label 'Register'
-        }
-        
-      }
       steps {
         sh 'ls'
       }
     }
     stage('Configuration') {
-      agent {
-        node {
-          label 'Configuration'
-        }
-        
-      }
       steps {
         echo 'Config'
       }
