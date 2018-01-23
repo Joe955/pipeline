@@ -20,7 +20,6 @@ pipeline {
       steps {
         waitUntil() {
           sleep 1
-          sh 'ls'
         }
         
       }
