@@ -43,7 +43,7 @@ pipeline {
     }
     stage('A/B Test') {
       steps {
-        echo 'A/B Test'
+        echo 'Running A/B Test'
         sleep 5
       }
     }
