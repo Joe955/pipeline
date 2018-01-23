@@ -1,21 +1,20 @@
 pipeline {
   agent any
-  stage('Upload Package') {
+  stages {
+    stage('Upload Package') {
       steps {
         echo 'Upload Package'
         sleep 5
       }
-   }
-   stage('Register') {
+    }
+    stage('Register') {
       steps {
         echo 'Register'
         sleep 5
       }
-   }
-  stages {
+    }    
     stage('Prepare') {
-      parallel {
-        
+      parallel {       
         stage('Configuration') {
           steps {
             echo 'Configuration'
